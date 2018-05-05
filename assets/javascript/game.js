@@ -4,7 +4,7 @@
 document.querySelector("#statement").innerHTML = "Press any key to get started";
 
 // Array of words to answer / choose from for guessing game
-var wordArray = ["CAT", "DOG", "MOUSE", "BIRD", "BAT", "SMURF"];
+var wordArray = ["HARRY", "HERMIONE", "RON", "WEASLEY", "DRACO", "HAGRID", "VOLDEMORT", "SNAPE", "DOBBY", "LUPIN", "SIRIUS", "GRYFFINDOR", "HUFFLEPUFF", "RAVENCLAW", "SLYTHERIN", "HOGWARTS", "DUMBLEDORE", "LUNA", "BUTTERBEER", "DIAGON"];
 
 // Choose an answer (word) at random from our answer array for the user to guess
 var ansWord = wordArray[Math.floor(Math.random() * wordArray.length)];
@@ -52,7 +52,7 @@ function keyPress() {
         console.log(userGuess);
         // Checks if the guess is in ansWord, if yes add to our answer and subtract from remainingLetters
         for (var j = 0; j < ansWord.length; j++) {
-            if (ansWord[j] == userGuess) {
+            if (ansWord[j] == userGuess && guessArray[j] != userGuess) {
                 guessArray[j] = userGuess;
                 remainingLetters--;
             }
@@ -71,7 +71,9 @@ function keyPress() {
             console.log(wins);
             document.querySelector("#array").innerHTML = guessArray.join(" ");
             document.querySelector("#wins").innerHTML = "Wins: " + wins;
+            document.querySelector("#win-image").src = "assets/images/" + ansWord + ".jpeg";
             setTimeout(newGame, 2000);
+            
         } else if (guessRemaining < 1) {
             console.log("YOU LOSE!");
             document.querySelector("#statement").innerHTML = "Sorry, out of guesses.  You lose.";
@@ -96,6 +98,7 @@ function newGame() {
     console.log(guessRemaining);
     guessArray = [];
     guessedLetters = [];
+    document.querySelector("#win-image").src = "assets/images/harryPotter.jpeg";
 
     for (i = 0; i < ansWord.length; i++) {
         guessArray[i] = "_";

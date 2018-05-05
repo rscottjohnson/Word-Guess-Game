@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <title>Word Guess Game</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
@@ -12,35 +16,70 @@
 </head>
 
 <body>
-
-    <!-- <div id="game">
-        <p>Press any key to get started!</p>
-    </div> -->
-
-    <div class="jumbotron jumbotron-fluid">
+    <div class="wrapper">
+        <div class="jumbotron heading">
+            <div class="row">
+                <div id="magic1" class="col-xs-3">
+                    <i class="fas fa-magic fa-5x"></i>
+                </div>
+                <div class="col-xs-6 center-heading">
+                    <h1 class="display-4">Harry Potter Hangman</h1>
+                </div>
+                <div class="col-xs-3">
+                    <i id="magic2" class="fas fa-magic fa-5x"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 sub-heading">
+                    <p class="lead">A wizarding word will magically be selected for you to guess!</p>
+                </div>
+            </div>
+        </div>
         <div class="container">
-            <h1 class="display-4">Guessing Game</h1>
-            <p class="lead">A word will be selected for you to guess.</p>
-            <p id="statement"></p>
-            <p id="array"></p>
-            <p id="wins"></p>
-            <p id="losses"></p>
-            <br>
-            <p>Letters already guessed:</p>
-            <p id="letters"></p>
-            <br>
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <div id="statement"></div>
+                    <div id="array"></div>
+                    <div class="al-guessed">
+                        <i class="fas fa-exclamation-triangle fa-3x"></i>
+                        <h3>Letters already guessed:</h3>
+                    </div>
+                    <div id="letters"></div>
+                    <div id="thumbUp">
+                        <i class="fas fa-thumbs-up fa-3x"></i>
+                        <h4 id="wins"></h4>
+                    </div>
+                    <div id="thumbDown">
+                        <i class="fas fa-thumbs-down fa-3x"></i>
+                        <h4 id="losses"></h4>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <img id="win-image" src="assets/images/harryPotter.jpeg" alt="Harry Potter" class="img-thumbnail img-responsive">
+                    <br>
+                </div>
+            </div>
+
+        </div>
+        <div class="push">
         </div>
     </div>
 
-    <p id="statement"></p>
-    <p id="array"></p>
-    <p id="wins"></p>
-    <p id="losses"></p>
+    <footer class="footer">
+        <div class="footer-container">
+            <span class="text-muted" id="p-footer">Copyright &copy;</span>
+        </div>
+    </footer>
 
 
-
-    <!-- Linking to JavaScript file -->
+    <!-- Linking to JavaScript files -->
     <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

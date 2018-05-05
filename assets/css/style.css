@@ -1,3 +1,170 @@
+html {
+  height: 100%;
+  margin: 0; 
+}
+
 body {
-    background: url(../images/dark-triangles.png);
+  font-family: 'Prata', serif;
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -65px;
+}
+
+i {
+  float: left;
+  clear: both;
+  align-content: center;
+}
+
+.jumbotron {
+  padding: 30px;
+}
+
+.heading {
+  background-color: #000000;
+  color:#ffffff;
+}
+
+.center-heading {
+  float: left;
+  width: 60%;
+  
+}
+
+.display-4 {
+  text-align: center;
+}
+
+#magic1 {
+  float: left;
+  width: 20%;
+  padding: 10px 0px 0px 40px;
+}
+
+#magic2 {
+  float: right; 
+  width: 20%;
+  padding: 10px 40px 0px 0px;
+}
+
+.sub-heading {
+  clear: left;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px 0px 0px;
+}
+
+.lead {
+  font-size: 28px;
+}
+
+.fa-hand-point-up {
+  margin: 20px;
+}
+
+h2, h4 {
+  text-align: center;
+}
+
+h4 {
+  margin: 20px 0px 20px 0px;
+}
+
+#statement {
+  font-size: 28px;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+
+#array {
+  font-size: 36px;
+  text-align: center;
+  margin: 15px 0px 20px 0px;
+}
+
+.al-guessed {
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+
+.fa-exclamation-triangle {
+  margin: 0px 0px 0px 20px;
+}
+
+#letters {
+  font-size: 32px;
+  text-align: center;
+  margin: 10px 0px 10px 0px;
+}
+
+.fa-thumbs-up, #wins, .fa-thumbs-down, #losses {
+  float: left;
+  margin-left: 20px;
+}
+
+#thumbUp {
+  clear: left;
+  float: left;
+  margin: 20px 10px 20px 0px;
+}
+
+#wins {
+  margin: 0px 10px 0px 10px;
+}
+
+#thumbDown {
+  float: right;
+  margin: 20px 10px 20px 0px;
+}
+
+#losses {
+  margin: 0px 30px 0px 10px;
+}
+
+#win-image {
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  right: 20%;
+}
+
+.footer {
+  height: 65px;
+  /* added to support sticky footer */
+  width: 100%;
+  background-color: #000000;
+  border-top: 10px solid ##566573;
+}
+
+.footer-container {
+  background-color: #000000;
+  border: none;
+  text-align: center;
+  padding: 35px 0px 0px 0px;
+}
+
+#p-footer {
+  background-color: #000000;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: ##FDFEFE;
+  text-align: center;
+  font-size: 0.625em;
+  /* changed from 10px */
+  padding: 0px 0px 0px 0px;
+}
+
+@media (max-width: 576px) {
+  #statement, #array, .lead, #letters {
+    font-size: 2.0em;
+}
+ 
+
+@media (max-width: 320px) {
+  #statement, #array, .lead, #letters {
+    font-size: 1.5em;
   }
+}
