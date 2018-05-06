@@ -71,9 +71,9 @@ function keyPress() {
             console.log(wins);
             document.querySelector("#array").innerHTML = guessArray.join(" ");
             document.querySelector("#wins").innerHTML = "Wins: " + wins;
-            document.querySelector("#win-image").src = "assets/images/" + ansWord + ".jpeg";
+            document.querySelector("#win-image").src = "assets/images/" + ansWord.toLocaleLowerCase() + ".jpeg";
             setTimeout(newGame, 2000);
-            
+
         } else if (guessRemaining < 1) {
             console.log("YOU LOSE!");
             document.querySelector("#statement").innerHTML = "Sorry, out of guesses.  You lose.";
